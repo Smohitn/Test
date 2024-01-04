@@ -133,38 +133,7 @@
         </footer>
          
     
-        <script>
-            let UserCreds = JSON.parse(localStorage.getItem("user-creds"));
-            let UserInfo = JSON.parse(localStorage.getItem("user-info"));
-        
-        
-           
-            let SignoutBtn = document.getElementById('signoutbutton');
-        
-        
-          
-            let Signout = ()=>{
-                localStorage.removeItem("user-creds");
-                localStorage.removeItem("user-info");
-                window.location.href = 'login.html'
-        
-            }
-        
-        
-            let CheckCred = ()=>{
-                if (!localStorage.getItem("user-creds"))
-                window.location = 'login.html'
-        
-                else{
-                    MsgHead.innerText = 'user with email "${UserCreds.email}" logged in';
-                 GreetHead.innerText = 'welcome ${UserInfo.firstname + " " + UserInfo.lastname}!';
-                }
-            }
-        
-            window.addEventListener('load', CheckCred);
-            SignoutBtn.addEventListener('click', Signout);
-        
-           </script>
+       
    
 </body>
 
